@@ -1,0 +1,22 @@
+{
+  "name": "chat_project",
+  "version": "0.0.1",
+  "description": "Учебный проект по созданию чата",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GeometricEath/chat_project.git"
+  },
+  "author": "Sergey Frolov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/GeometricEath/chat_project/issues"
+  },
+  "homepage": "https://github.com/GeometricEath/chat_project#readme",
+  "devDependencies": {
+    "static-livereload": "^0.1.4"
+  }
+}
