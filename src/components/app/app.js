@@ -4,17 +4,15 @@ import Field from '../field/field.js';
 export default class App{
     constructor(){
         this.app_elem = document.querySelector('.app');
-        this.field = new Field(this.app_elem);
+        this.field = new Field();
     }
-    static get chat(){
-        return new Chat();
-    }
-    // static get field(){
-    //     return new Field();
-    // }
 
     render(){
-        this.field.render(this.app_elem);
+        let app_elem_chatArea = document.createElement('div');
+        app_elem_chatArea.className ='app_chatArea';
+        this.app_elem.appendChild(app_elem_chatArea);
+        // debugger;
+        this.field.render(app_elem_chatArea);
         
     }
 }

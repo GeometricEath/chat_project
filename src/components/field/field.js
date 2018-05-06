@@ -1,16 +1,15 @@
 'use stirct'
 
 
-export default class Field {
-    constructor(el) {
-        this.elem = el;
+ export default class Field {
+    constructor() {
+        // this.elem = el; //Каким образом здесь в место div.app_chatArea получаю div.app?!!
 
     }
 
-    render(){
-        let obj = document.createElement('object');
-        obj.innerHTML = this.template();
-        this.elem.appendChild(obj);
+    render(el){
+        // this.elem.insertAdjacentHTML('beforeend', this.template());
+        el.innerHTML = this.template();
     }
     template() {
         return `
