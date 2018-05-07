@@ -1,5 +1,6 @@
 import Field from '../field/field.js';
 import Chat from '../chat/chat.js';
+import Massage from '../massage/massage.js';
 
 export default class App{
     constructor(){
