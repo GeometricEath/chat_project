@@ -16,7 +16,7 @@ export default class Field {
         <div class="app_field">
         <input type="text" class="app_field_inp" placeholder="tipe you massege">
        
-        <input type="submit" class="app_field_submit" value="Submit">
+        <input type="submit" class="app_field_submit" value="Отправить">
         </div>       
        `
     }
