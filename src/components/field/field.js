@@ -14,7 +14,7 @@ export default class Field {
     template() {
         return `
         <div class="app_field">
-        <input type="text" class="app_field_inp" placeholder="tipe you massege">
+        <input type="text" class="app_field_inp" placeholder="type your message">
        
         <input type="submit" class="app_field_submit" value="Отправить">
         </div>       
