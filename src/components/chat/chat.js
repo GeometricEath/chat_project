@@ -3,6 +3,7 @@ import Message from '../message/message.js';
 export default class Chat {
     constructor() {
         // this.elem = el;
+        this._messages=[]
     }
 
     render(el) {
