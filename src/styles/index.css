@@ -9,6 +9,8 @@ html,body{background-color: #0581D1;}
     height: 50px;
     background-color: #EFF3F6;
     box-sizing: content-box;
+    border-top: solid  2px #ECEDEF;
+
 }
 .app_field_inp{
     width: 100%;
@@ -17,19 +19,42 @@ html,body{background-color: #0581D1;}
     background-color: transparent;
     
 }
-.app_chatArea{
-    background-color: #D4D9DF;
+.app_centrBlock{
+    background-color: #ECF1F5;
     display: flex;
     flex-direction: column;
     align-content: stretch;
     height: calc(100vh - 120px);
 }
 .app_chat{
+    border-right: solid 4px #D4E1EA;
     height: 100%;
     display: flex;
     flex-direction: column;
 }
 .app_chat_title{
     height: 50px;
-    background-color: #A5C6DD;
+    background-color: #E1E7ED;
+    border-bottom: solid 2px #DDE2E9;
+}
+.message {
+	background: #fff;
+	display: inline-block;
+	padding: 13px;
+	width: 274px;
+	border-radius: 2px;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, .04);
+	position: relative;
+}
+
+.message:before {
+	content: "";
+	position: absolute;
+	display: block;
+	left: 0;
+	border-right: 6px solid #fff;
+	border-top: 6px solid transparent;
+	border-bottom: 6px solid transparent;
+	top: 10px;
+	margin-left: -6px;
 }

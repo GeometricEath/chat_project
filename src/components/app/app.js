@@ -10,7 +10,7 @@ export default class App{
 
     render(){
         let app_elem_chatArea = document.createElement('div');
-        app_elem_chatArea.className ='app_chatArea';
+        app_elem_chatArea.className ='app_centrBlock';
         this.app_elem.appendChild(app_elem_chatArea);
         this.field.render(app_elem_chatArea);
         this.chat.render(app_elem_chatArea);
