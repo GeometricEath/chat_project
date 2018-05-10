@@ -3,13 +3,36 @@ import Message from '../message/message.js';
 export default class Chat {
     constructor() {
         // this.elem = el;
-        this._messages=[]
+        this._messages= new Map()
+            .set('op',{
+                user_name: 'Генри',
+                text: 'Первое сообщение!',
+                time: new Date().toLocaleTimeString(),
+                user_photo:'./src/img/people.png'
+            })
+            .set('op',{
+                user_name: 'Джейн',
+                text: 'Второе сообщение',
+                time: new Date().toLocaleTimeString(),
+                user_photo:'./src/img/people.png'
+            })
+            .set('op',{
+                user_name: 'Генри',
+                text: 'И еще одно',
+                time: new Date().toLocaleTimeString(),
+                user_photo:'./src/img/people.png'
+            });
+        
+       
     }
 
     render(el) {
         el.insertAdjacentHTML('afterbegin', this.template());
-        this.message = new Message();
+        // this.message = new Message();
         // el.innerHTML = this.template();
+        this._messages.forEach((element) => {
+            new Message(element);
+        });
     }
     template() {
         return `
