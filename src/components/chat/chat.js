@@ -3,27 +3,27 @@ import Message from '../message/message.js';
 export default class Chat {
     constructor() {
         // this.elem = el;
-        this._messages= new Map()
-            .set('op',{
+        this._messages = [
+            {
                 user_name: 'Генри',
                 text: 'Первое сообщение!',
                 time: new Date().toLocaleTimeString(),
-                user_photo:'./src/img/people.png'
-            })
-            .set('op',{
+                user_photo: './src/img/people.png'
+            },
+            {
                 user_name: 'Джейн',
                 text: 'Второе сообщение',
                 time: new Date().toLocaleTimeString(),
-                user_photo:'./src/img/people.png'
-            })
-            .set('op',{
+                user_photo: './src/img/people.png'
+            },
+            {
                 user_name: 'Генри',
                 text: 'И еще одно',
                 time: new Date().toLocaleTimeString(),
-                user_photo:'./src/img/people.png'
-            });
-        
-       
+                user_photo: './src/img/people.png'
+            }]
+
+
     }
 
     render(el) {
