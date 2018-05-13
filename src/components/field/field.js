@@ -31,6 +31,7 @@ export default class Field {
         const form = event.target;
         const input = event.target.inp;
         console.log(input.value);
+        form.reset();
     }
 
     addMessage() {
