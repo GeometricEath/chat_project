@@ -2,15 +2,16 @@
 
 
 export default class Field {
-    constructor() {
-        // this.elem = el;
+    constructor(el) {
+        this.elem = el;
 
     }
 
     render(el) {
-        el.insertAdjacentHTML('beforeend', this.template());
+        this.elem.insertAdjacentHTML('beforeend', this.template());
         // el.innerHTML = this.template();
     }
+
     template() {
         return `
         <div class="app_field">
@@ -19,5 +20,9 @@ export default class Field {
         <input type="submit" class="app_field_submit" value="Отправить">
         </div>       
        `
+    }
+
+    onclick() {
+        this.elem
     }
 }
