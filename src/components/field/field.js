@@ -3,26 +3,37 @@
 
 export default class Field {
     constructor(el) {
-        this.elem = el;
+        this.elem = document.createElement('form');
+        this.elem.className = 'app_field';
+        el.appendChild(this.elem);
+        
+        this.elem.addEventListener(
+            'submit',
+            this.submit.bind(this)
+        )
 
     }
 
-    render(el) {
-        this.elem.insertAdjacentHTML('beforeend', this.template());
-        // el.innerHTML = this.template();
+    render() {
+        // this.elem.insertAdjacentHTML('beforeend', this.template());
+        this.elem.innerHTML = this.template();
     }
 
     template() {
         return `
-        <div class="app_field">
-        <input type="text" class="app_field_inp" placeholder="type your message">
-        <button class="app_field_submit">Отправить</button>
-        
-        </div>       
+        <input name="inp" type="text" class="app_field_inp" placeholder="type your message">
+        <input type="submit" class="app_field_submit" value="Отправить">     
        `
     }
 
-    onclick() {
-        this.elem
+    submit(evnt) {
+        event.preventDefault();
+        const form = event.target;
+        const input = event.target.inp;
+        console.log(input.value);
+    }
+
+    addMessage() {
+        
     }
 }
