@@ -23,4 +23,12 @@
     background-color: #636B76;
     border: none;
     color: #fff;
-}  
+}
+
+.app_field_submit:focus{
+    outline-color: transparent;
+
+}
+.app_field_submit:active{
+    background-color: rgb(74, 80, 88);
+}
