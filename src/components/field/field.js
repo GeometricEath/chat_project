@@ -29,12 +29,18 @@ export default class Field {
     submit(evnt) {
         event.preventDefault();
         const form = event.target;
-        const input = event.target.inp;
-        console.log(input.value);
+        const message = event.target.inp.value;
+        
+        let new_event = new Event(
+            'newMessage',
+            {bubbles: true}
+        )
+        new_event.date = message;
+
+        this.elem.dispatchEvent(new_event);
+
         form.reset();
     }
 
-    addMessage() {
-        
-    }
+    
 }
