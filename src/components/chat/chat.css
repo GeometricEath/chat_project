@@ -20,7 +20,7 @@
 }
 .app_chat_box{
     padding: 20px;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 ::-webkit-scrollbar-button { 
