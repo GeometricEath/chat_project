@@ -28,7 +28,7 @@ export default class Field extends Emitter {
        `
     }
 
-    submit(evnt) {
+    submit(event) {
         event.preventDefault();
         const form = event.target;
         const message = event.target.inp.value;

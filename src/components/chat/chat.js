@@ -31,11 +31,6 @@ export default class Chat extends Emitter {
                 time: new Date().toLocaleTimeString(),
                 user_photo: './src/img/people.png'
             }];
-
-        this.addEventListener(
-            'newMessage',
-            this.addMessage.bind(this)
-        );
     }
 
     render() {

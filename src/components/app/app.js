@@ -9,6 +9,12 @@ export default class App {
         this.app_centrBlock.className = 'app_centrBlock';
         this.chat = new Chat(this.app_centrBlock);
         this.field = new Field(this.app_centrBlock);
+
+        this.field.addEventListener(
+            'newMessage',
+            this.chat.addMessage.bind(this)
+            // () => {console.log('work')}
+        );
     }
 
     render() {

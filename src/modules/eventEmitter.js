@@ -4,7 +4,7 @@ export default class EventEmitter{
     }
 
     dispatchEvent(evt) {
-        const listners = this.events[evt.type] || [];
+        const listners = this.events[evt.type];
         listners.forEach(listner => {
             listner.call(this, evt)           
         });
