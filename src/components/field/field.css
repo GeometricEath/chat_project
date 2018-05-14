@@ -1,0 +1,34 @@
+.app_field{
+    display: flex;
+    height: 60px;
+    background-color: #FFFFFF;
+    box-sizing: content-box;
+    border-top: solid  2px #ECEDEF;
+
+}
+.app_field_inp{
+    width: 100%;
+    padding-left:10px; 
+    border: 0px;
+    background-color: transparent;
+    font-size: 24px; 
+}
+.app_field_inp:focus{
+    border: 0px;
+    outline-width:0px;
+    outline-color: transparent;
+}
+
+.app_field_submit{
+    background-color: #636B76;
+    border: none;
+    color: #fff;
+}
+
+.app_field_submit:focus{
+    outline-color: transparent;
+
+}
+.app_field_submit:active{
+    background-color: rgb(74, 80, 88);
+}
