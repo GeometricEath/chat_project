@@ -1,7 +1,11 @@
 import Message from '../message/message.js';
+import Emitter from '../../modules/eventEmitter.js'
 
-export default class Chat {
+
+export default class Chat extends Emitter {
     constructor(el) {
+        super();
+
         this.elem = document.createElement('div');
         this.elem.className = 'app_chat_container';
         this.el = el;
@@ -27,10 +31,10 @@ export default class Chat {
                 time: new Date().toLocaleTimeString(),
                 user_photo: './src/img/people.png'
             }];
-        
-        this.el.addEventListener(
-        'newMessage',
-        this.addMessage.bind(this)
+
+        this.addEventListener(
+            'newMessage',
+            this.addMessage.bind(this)
         );
     }
 
@@ -54,6 +58,7 @@ export default class Chat {
             user_name: this.user,
             text: ev.date,
             time: new Date().toLocaleTimeString(),
-            user_photo: './src/img/people.png'})
+            user_photo: './src/img/people.png'
+        })
     }
 }

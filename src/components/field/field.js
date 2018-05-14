@@ -1,8 +1,10 @@
-'use stirct'
+import Emitter from '../../modules/eventEmitter.js'
 
 
-export default class Field {
+export default class Field extends Emitter {
     constructor(el) {
+        super()
+
         this.elem = document.createElement('form');
         this.elem.className = 'app_field';
         el.appendChild(this.elem);
@@ -37,7 +39,7 @@ export default class Field {
         )
         new_event.date = message;
 
-        this.elem.dispatchEvent(new_event);
+        this.dispatchEvent(new_event);
 
         form.reset();
     }
