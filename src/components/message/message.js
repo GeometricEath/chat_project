@@ -1,18 +1,18 @@
 export default class Message {
     constructor(date) {
         this.parent = document.querySelector('.app_chat_box');
-        if(!this.el2){
-            this.el2 = document.createElement('div');
-            this.el2.classList = 'message_box';
-        }
-        this.parent.appendChild(this.el2);
+        this.conteiner = document.createElement('div');
+        this.conteiner.classList = 'message_box';
+        this.parent.appendChild(this.conteiner);
+        
         this.user_name = 'Генри'
         this.date = date;
-        this.render(this.el2);
+        this.render();
     }
 
-    render(el) {
-        el.insertAdjacentHTML('beforeend', this.template(this.date));
+    render() {
+        this.conteiner.insertAdjacentHTML('beforeend', this.template(this.date));
+        this.conteiner.scrollIntoView(false);
     }
 
     template(options) {
