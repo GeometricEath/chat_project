@@ -16,7 +16,6 @@ export default class EventEmitter{
                 this.events[evt] = [];
             }
             this.events[evt].push(listner);
-            console.dir('добавлен eventListener ' + listner)
         }else console.error('некорректные аргументы. Ожидалось evt=string, listner=function');
     }
 }
