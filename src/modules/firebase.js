@@ -1,10 +1,3 @@
-// fetch('https://geochat-project.firebaseio.com/messages.json')
-// .then(response =>{
-//     return response.json();
-// }).then((date)=>{
-//     console.dir(date);
-// })
-
 export default class Firebase {
     constructor(chat_id, baseUrl) {
         this.chat_id = chat_id || this.initChat();

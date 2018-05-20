@@ -1,6 +1,7 @@
 import Field from '../field/field.js';
 import Chat from '../chat/chat.js';
 import Message from '../message/message.js';
+import styles from './app.css';
 
 export default class App {
     constructor({

@@ -1,4 +1,5 @@
-import Emitter from '../../modules/eventEmitter.js'
+import Emitter from '../../modules/eventEmitter.js';
+import styles from './field.css';
 
 
 export default class Field extends Emitter {

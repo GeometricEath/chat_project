@@ -1,4 +1,5 @@
 import Message from '../message/message.js';
+import styles from './chat.css';
 
 export default class Chat{
     constructor({
@@ -12,25 +13,6 @@ export default class Chat{
 
         el.appendChild(this.elem);
 
-        this._messages = [
-            {
-                user_name: 'Генри',
-                text: 'Первое сообщение!',
-                time: new Date().toLocaleTimeString(),
-                user_photo: './src/img/people.png'
-            },
-            {
-                user_name: 'Джейн',
-                text: 'Второе сообщение',
-                time: new Date().toLocaleTimeString(),
-                user_photo: './src/img/people.png'
-            },
-            {
-                user_name: 'Генри',
-                text: 'И еще одно',
-                time: new Date().toLocaleTimeString(),
-                user_photo: './src/img/people.png'
-            }];
     }
 
     render() {

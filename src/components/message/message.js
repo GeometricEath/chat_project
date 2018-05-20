@@ -1,3 +1,4 @@
+import styles from './message.css';
 export default class Message {
     constructor(date) {
         this.parent = document.querySelector('.app_chat_box');
