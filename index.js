@@ -23,10 +23,10 @@ firebase.getMessages()
     aplication.render();
     });
 
-let mock = Object.values(mockdata);
-mock.forEach(element => {
-    firebase.sendMessage(element);
-});
+// let mock = Object.values(mockdata);
+// mock.forEach(element => {
+//     firebase.sendMessage(element);
+// });
 
 // fetch('https://geochat-project.firebaseio.com/messages.json')
 // .then(response =>{
