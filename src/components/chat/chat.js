@@ -1,15 +1,15 @@
 import Message from '../message/message.js';
-import Emitter from '../../modules/eventEmitter.js'
 
-
-export default class Chat extends Emitter {
-    constructor(el) {
-        super();
-
+export default class Chat{
+    constructor({
+        el,
+        data
+    }) {
         this.elem = document.createElement('div');
         this.elem.className = 'app_chat_container';
         this.el = el;
-        this.user = 'Генри';
+        this.data = data;
+
         el.appendChild(this.elem);
 
         this._messages = [
@@ -37,7 +37,7 @@ export default class Chat extends Emitter {
         this.elem.insertAdjacentHTML('afterbegin', this.template());
         // this.message = new Message();
         // el.innerHTML = this.template();
-        this._messages.forEach((element) => {
+        this.data.forEach((element) => {
             new Message(element);
         });
     }
@@ -48,12 +48,7 @@ export default class Chat extends Emitter {
        `
     }
 
-    addMessage(ev) {
-        new Message({
-            user_name: this.user,
-            text: ev.date,
-            time: new Date().toLocaleTimeString(),
-            user_photo: './src/img/people.png'
-        })
+    addMessage(message) {
+        new Message(message)
     }
 }

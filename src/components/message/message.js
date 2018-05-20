@@ -5,7 +5,6 @@ export default class Message {
         this.conteiner.classList = 'message_box';
         this.parent.appendChild(this.conteiner);
         
-        this.user_name = 'Генри'
         this.date = date;
         this.render();
     }
@@ -17,9 +16,9 @@ export default class Message {
 
     template(options) {
         return `
-    <img src="${options.user_photo}" alt="">
+    <img src="${options.user.photo}" alt="">
     <div class="message">
-    <h2 class="app_chat_message_sender">${options.user_name+':'}</h2>
+    <h2 class="app_chat_message_sender">${options.user.name+':'}</h2>
     <p class="app_chat_message_text">${options.text}</p>
     <span class="app_chat_message_time">${options.time}</span>
     </div>`
