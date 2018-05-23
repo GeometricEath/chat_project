@@ -29,7 +29,6 @@
     "husky": "^0.14.3",
     "mini-css-extract-plugin": "^0.4.0",
     "pug-loader": "git+https://github.com/pugjs/pug-loader.git#master",
-    "static-livereload": "^0.1.4",
     "style-loader": "^0.21.0",
     "webpack": "^4.8.3",
     "webpack-cli": "^2.1.3",
